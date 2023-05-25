@@ -3,18 +3,18 @@
     display: block ;
     width: 100%;
     height: 6em;
+    line-height: 6em;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.9);
     z-index: 999;
 }
 
 body {
     background-image: url("wrgbwerbheath-00001.png");
-    background-repeat:repeat;
-    background-size: 100%;
-    width: 100%;
+    background-repeat: repeat;
     color: red;
+    background-color: blue;
 }
 
 .HEADBAR img {
@@ -23,11 +23,8 @@ body {
 }
 
 .HEADBAR p {
-    width: fit-content;
-    height: fit-content;
-    display: block;
+    line-height: normal;
     font-size: 2em;
-    margin: auto 0 auto 0;
 }
 
 nav {
@@ -59,32 +56,35 @@ nav ul {
     font-size: 1em;
     background-color: rgba(0,0,0,0.2);
     color: white;
-    padding: 16px;
     width: 100%;
-    border: none;
     cursor: pointer;
+    transition: color, 500ms;
   }
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     font-size: 2em;
-    border: solid rgba(0,0,0,0.2) 2px;
     position: fixed;
     width: 6em;
-    display: inline-block;
     height: min-content;
-    margin: 2vh 0 2vh 2px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 2em;
   }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
-    display: none;
+    display: block;
     position: absolute;
     text-align: center;
-    background-color:rgba(0,0,0,0.4);
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color:rgba(10,10,10,0);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
+    color: rgba(0,0,0,0);
+    overflow: hidden;
     width: 100%;
+    max-height: 0;
     z-index: 1;
+    transition: max-height, 500ms, color, 500ms, background-color, 1000ms;
   }
   
   /* Links inside the dropdown */
@@ -94,14 +94,21 @@ nav ul {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: background-color, 500ms, color, 500ms;
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: rgba(0,0,0,0.5)}
+  .dropdown-content a:hover {
+    background-color: rgba(0,0,0,0.5); 
+    color: maroon;
+}
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
-    display: block;
+    background-color:rgba(10,10,10,0.7);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: rgba(250,250,250,1);
+    max-height: 110vh;
   }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
@@ -115,6 +122,7 @@ article {
     position: relative;
     top: 6em;
     padding:0 20% 0 20% ;
+    margin-bottom: 1em;
 }
 }
 
@@ -125,7 +133,12 @@ article {
     top: 6em;
     z-index: 0;
     margin: 0;
+    margin-bottom: 1em;
 }
+}
+
+button:hover {
+    color: red;
 }
 
 article h1 {
