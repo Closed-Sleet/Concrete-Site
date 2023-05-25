@@ -1,0 +1,37 @@
+.HEADBAR {
+    position: fixed;
+    width: 100%;
+    height: 20vh;
+    top: 0;
+    left: 0;
+    border: solid black 4px;
+}
+
+article {
+    position: relative;
+    top: 20vh;
+    border: solid red 4px;
+}
+
+.HEADBAR img {
+    height: 100%;
+    display: block;
+}
+
+.HEADBAR p {
+    height: 100%;
+    width: fit-content;
+    display: block;
+}
+
+nav {
+    display: inline-block;
+    width: fit-content;
+    height: 100%;
+}
+
+nav ul {
+    display: inline;
+    list-style-type: none;
+    height: 100%;
+}
