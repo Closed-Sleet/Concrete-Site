@@ -1,47 +1,18 @@
-.HEADBAR {
-    position: fixed ;
-    display: block ;
-    width: 100%;
-    height: 6em;
-    line-height: 6em;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.9);
-    z-index: 999;
-}
+/* 
+    Made by Lantis Hegg
+    CSS is very rough and not my finest work.
+    I'm stil happy with how this has turned out so far.
+*/
 
+
+/* ---------------------------------------------------------------------- */
+/* GENERAL STYLING*/
+/* ---------------------------------------------------------------------- */
 body {
     background-image: url("wrgbwerbheath-00001.png");
     background-repeat: repeat;
     color: red;
-    background-color: blue;
-}
-
-.HEADBAR img {
-    height: 100%;
-    display: block;
-}
-
-.HEADBAR p {
-    line-height: normal;
-    font-size: 2em;
-}
-
-nav {
-    display: inline-block;
-    width: fit-content;
-    height: 100%;
-}
-
-nav ul {
-    display: inline;
-    list-style-type: none;
-    height: 100%;
-    overflow: inherit ;
-}
-
-.float_left{
-    float: left;
+    background-color: navy;
 }
 
 .credit{
@@ -51,17 +22,59 @@ nav ul {
     color: gray;
 }
 
-/* Style The Dropdown Button */
-.dropbtn {
+@media (min-width: 1200px)
+{
+article {
+    position: relative;
+    top: 6em;
+    padding:0 20% 1em 20% ;
+}
+}
+
+@media (max-width: 1200px)
+{
+article {
+    position: relative;
+    top: 6em;
+    margin: 0;
+    padding: 0 0 1em 0 ;
+}
+}
+
+article {
+    background-color: rgba(0,0,0,0.5);
+}
+
+article h1 {
+    font-size: 4em;
+}
+
+article h2 {
+    font-size: 3em;
+}
+
+article p {
+    font-size: 2em;
+}
+
+/* ---------------------------------------------------------------------- */
+/* DROP DOWN BUTTON */
+/* ---------------------------------------------------------------------- */
+    button:hover {
+    color: red;
+    }
+
+    .dropbtn {
     font-size: 1em;
     background-color: rgba(0,0,0,0.2);
     color: white;
+    border-color: red;
     width: 100%;
     cursor: pointer;
     transition: color, 500ms;
   }
   
-  /* The container <div> - needed to position the dropdown content */
+  /* The container <div> needed to position the dropdown content */
   .dropdown {
     font-size: 2em;
     position: fixed;
@@ -72,7 +85,7 @@ nav ul {
     font-size: 2em;
   }
   
-  /* Dropdown Content (Hidden by Default) */
+  /* Dropdown Content (Hidden by Default via max-height: 0;) */
   .dropdown-content {
     display: block;
     position: absolute;
@@ -85,7 +98,7 @@ nav ul {
     max-height: 0;
     z-index: 1;
     transition: max-height, 500ms, color, 500ms, background-color, 1000ms;
-  }
+    }
   
   /* Links inside the dropdown */
   .dropdown-content a {
@@ -95,13 +108,13 @@ nav ul {
     text-decoration: none;
     display: block;
     transition: background-color, 500ms, color, 500ms;
-  }
+     }
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
     background-color: rgba(0,0,0,0.5); 
     color: maroon;
-}
+    }
   
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
@@ -116,39 +129,44 @@ nav ul {
     background-color: rgba(0,0,0,0.4);
   }
 
-@media (min-width: 1200px)
-{
-article {
-    position: relative;
-    top: 6em;
-    padding:0 20% 0 20% ;
-    margin-bottom: 1em;
-}
-}
+  /* ---------------------------------------------------------------------- */
+  /* HEADER BAR */
+  /* ---------------------------------------------------------------------- */
+  .HEADBAR {
+    position: fixed ;
+    display: block ;
+    width: 100%;
+    height: 6em;
+    line-height: 6em;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 999;
+    }
 
-@media (max-width: 1200px)
-{
-article {
-    position: relative;
-    top: 6em;
-    z-index: 0;
-    margin: 0;
-    margin-bottom: 1em;
-}
-}
+    .HEADBAR img {
+        height: 100%;
+        display: block;
+    }
 
-button:hover {
-    color: red;
-}
+    .HEADBAR p {
+        line-height: normal;
+        font-size: 2em;
+    }
 
-article h1 {
-    font-size: 4em;
-}
+    nav {
+        display: inline-block;
+        width: fit-content;
+        height: 100%;
+    }
 
-article h2 {
-    font-size: 3em;
-}
+    nav ul {
+        display: inline;
+        list-style-type: none;
+        height: 100%;
+        overflow: inherit ;
+    }
 
-article p {
-    font-size: 2em;
-}
+    .float_left{
+        float: left;
+    }
